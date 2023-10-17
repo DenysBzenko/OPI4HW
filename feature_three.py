@@ -1,15 +1,12 @@
-
 from flask import Flask, request, jsonify
 import os
 
 app = Flask(__name__)
 
-# Service layer for business logic separation
+
 def delete_user_data_service(user_id):
-    # Logic to delete user data, ensuring GDPR-compliance
-    # This should include deleting records from all databases, backups, logs, third-party services, etc.
-    # Placeholder logic, actual application logic may involve multiple steps and verification
-    return True  # return True if successful, False otherwise
+
+    return True
 
 @app.route('/api/user/forget', methods=['POST'])
 def forget_user():

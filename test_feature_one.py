@@ -11,7 +11,7 @@ class FeatureOneTestCase(unittest.TestCase):
 
     @patch.object(delete_user_data_service, 'delete_user_data_service')
     def test_forget_user_endpoint_success(self, mock_delete):
-        # Test the successful deletion of user data
+
         mock_delete.return_value = True
 
         response = self.app.post('/api/user/forget?userId=123')
@@ -34,7 +34,7 @@ class FeatureOneTestCase(unittest.TestCase):
         mock_delete.assert_called_once_with('123')
 
     def test_forget_user_endpoint_missing_userId(self):
-        # Test the response when 'userId' is not provided
+
         response = self.app.post('/api/user/forget')
         data = response.get_json()
 

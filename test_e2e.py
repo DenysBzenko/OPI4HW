@@ -1,9 +1,9 @@
-# test_e2e.py
+
 import unittest
 import requests
 
 class TestEndToEnd(unittest.TestCase):
-    # Assuming the application is running on localhost and port 5000
+
     BASE_URL = 'http://localhost:5000'
 
     def test_total_online_time_e2e(self):
